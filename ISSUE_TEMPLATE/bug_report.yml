@@ -1,0 +1,133 @@
+name: Bug Report
+description: Report a reproducible problem or unexpected behavior.
+title: "[Bug]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue.
+
+        Please provide enough information to reproduce and investigate the problem.
+        Do not include passwords, API keys, access tokens, personal data, or other sensitive information.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Provide a short description of the problem.
+      placeholder: "Example: Login fails after the session expires"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Select the impact of the issue.
+      options:
+        - Critical - System unavailable or severe security/data impact
+        - High - Major functionality unavailable
+        - Medium - Functionality affected but workaround exists
+        - Low - Minor issue or limited impact
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected Area
+      description: Select the area most closely related to the issue.
+      options:
+        - Backend / API
+        - Frontend / Web
+        - Apps / Client Applications
+        - DevOps / Infrastructure
+        - Database
+        - Authentication / Security
+        - QA / Testing
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Where does the issue occur?
+      options:
+        - Local / Development
+        - Development
+        - QA
+        - Staging
+        - Production
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / Build / Commit
+      description: Provide the application version, build number, tag, or commit hash if known.
+      placeholder: "Example: v1.4.2 or 8f31c2a"
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Describe the exact steps required to reproduce the problem.
+      placeholder: |
+        1. Go to...
+        2. Select...
+        3. Enter...
+        4. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: Describe what should have happened.
+      placeholder: "Describe the expected result."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: Describe what actually happened.
+      placeholder: "Describe the actual result."
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs
+      description: |
+        Add relevant error messages, stack traces, or logs.
+        Remove credentials, tokens, personal data, and other sensitive information before submitting.
+      placeholder: "Paste sanitized logs here."
+      render: shell
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add screenshots, videos, related issues, configuration details, or any other useful information.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched existing issues to avoid creating a duplicate.
+          required: true
+        - label: I have removed passwords, API keys, tokens, personal data, and other sensitive information.
+          required: true
+        - label: I have provided enough information to reproduce or investigate the issue.
+          required: true

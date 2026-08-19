@@ -1,0 +1,93 @@
+name: Feature Request
+description: Suggest a new feature, improvement, or enhancement.
+title: "[Feature]: "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement.
+
+        Please describe the business or technical need clearly.
+        Do not include passwords, API keys, access tokens, personal data, or other sensitive information.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Provide a short title or summary for the proposed feature.
+      placeholder: "Example: Add multi-factor authentication to the customer portal"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Select the area most closely related to this request.
+      options:
+        - Backend / API
+        - Frontend / Web
+        - Apps / Client Applications
+        - DevOps / Infrastructure
+        - Database
+        - Authentication / Security
+        - QA / Testing
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Need
+      description: Describe the problem, limitation, or business need this feature would address.
+      placeholder: "Describe the current situation and why an improvement is needed."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature or improvement you are proposing.
+      placeholder: "Describe how you expect the feature to work."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the conditions that should be met for this feature to be considered complete.
+      placeholder: |
+        - User can...
+        - System must...
+        - Validation should...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or workarounds that have been considered.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add mockups, diagrams, screenshots, technical notes, related issues, or other useful information.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have searched existing issues to avoid creating a duplicate request.
+          required: true
+        - label: I have not included passwords, API keys, tokens, personal data, or other sensitive information.
+          required: true
+        - label: I have clearly described the problem or need this feature is intended to address.
+          required: true

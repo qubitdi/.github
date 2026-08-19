@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Security Vulnerability
+    url: https://qubitdi.com
+    about: Report security-related concerns through the official Qubit Data Innovations contact channel.
+
+  - name: General Support
+    url: https://qubitdi.com
+    about: Contact Qubit Data Innovations for general support or questions that are not software issues.
